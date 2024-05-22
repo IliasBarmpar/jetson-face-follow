@@ -55,6 +55,7 @@ def face_detect():
                 ret, frame = video_capture.read()
                 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
                 faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+                
                 center_x = 0
                 center_y = 0
                 for (x, y, w, h) in faces:            
