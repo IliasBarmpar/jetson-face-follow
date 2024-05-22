@@ -6,9 +6,9 @@ servo_pan_pin = 17
 servo_tilt_pin = 27
 
 # Initialize ServoKit and servos
-kit = ServoKit(channels=2)
-servo_pan = kit.servo[servo_pan_pin]
-servo_tilt = kit.servo[servo_tilt_pin]
+kit = ServoKit(channels=16)
+# servo_pan = kit.servo[servo_pan_pin]
+# servo_tilt = kit.servo[servo_tilt_pin]
 
 """
 ... Rest of the gstreamer_pipeline function remains the same ...
