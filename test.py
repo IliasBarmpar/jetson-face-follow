@@ -21,7 +21,7 @@ def gstreamer_pipeline(
     display_width=960,
     display_height=540,
     framerate=30,
-    flip_method=0,
+    flip_method=2,
 ):
     return (
         "nvarguscamerasrc sensor-id=%d ! "
@@ -69,8 +69,8 @@ def face_detect():
                     tilt_angle = map_range(center_y, 0, frame.shape[0], 0, 180)
 
                     # Set servo positions
-                    servo_pan.angle = pan_angle
-                    servo_tilt.angle = tilt_angle
+                    servo_pan.angle = 0# pan_angle
+                    servo_tilt.angle = 180-tilt_angle
 
                     print(f"Center: ({center_x}, {center_y}) - Pan: {pan_angle}, Tilt: {tilt_angle}")
 
